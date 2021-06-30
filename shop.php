@@ -1,8 +1,7 @@
 <?php
-session_start();
 
 if(isset($_SESSION['cart_list'])){
-  echo "Корзина:" . count($_SESSION['cart_list'] . "товар");
+  echo "Корзина:" . count($_SESSION['cart_list']) . "товар";
 }
 
 require_once 'config/connect.php';
@@ -26,7 +25,7 @@ require_once 'config/connect.php';
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
   </head>
   <body>
-    
+
     <header role="banner">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -85,7 +84,7 @@ require_once 'config/connect.php';
           <div class="col-md-8 text-center col-sm-12 element-animate">
             <h1>Зоотовары</h1>
             <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a metus vehicula, eleifend nulla nec, lacinia metus. In porta nisi velit, et dapibus elit accumsan suscipit.</p>
-            <a href="puppy.php" class="btn btn-white btn-outline-white">Приобрести щенка</a> 
+            <a href="puppy.php" class="btn btn-white btn-outline-white">Приобрести щенка</a>
           </div>
         </div>
       </div>
@@ -119,7 +118,7 @@ require_once 'config/connect.php';
             $products = mysqli_fetch_all($products);
             foreach ($products as $product) {
               ?>
-          
+
 
               <div class="media d-block media-custom text-center">
                 <img src="img/toy_2.png" alt="Image Placeholder" class="img-fluid"></a>
