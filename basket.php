@@ -1,7 +1,4 @@
 <?php
-session_start();
-
-
 require_once 'config/connect.php';
 require_once 'vendor/functions.php';
 
@@ -10,7 +7,7 @@ if ( isset($_GET['delete_id']) && isset($_SESSION['cart_list']) ) {
   foreach ($_SESSION['cart_list'] as $key => $value) {
     if ( $value['id'] == $_GET['delete_id'] ) {
       unset($_SESSION['cart_list'][$key]);
-    }   
+    }
   }
 }
 
@@ -42,11 +39,11 @@ if ( isset($_GET['id']) && !empty($_GET['id']) ) {
       $_SESSION['cart_list'][] = $current_added_course;
     }
 
-  } 
-  
+  }
+
 }
 
-?> 
+?>
 
 
 <!--СЛАЙДЕР-->
@@ -74,7 +71,7 @@ if ( isset($_GET['id']) && !empty($_GET['id']) ) {
         </div>
       </div>
     </div>
-    
+
   </div>
 </section>
 
@@ -84,19 +81,22 @@ if ( isset($_GET['id']) && !empty($_GET['id']) ) {
     Корзина
   </div>
   <?php if ( isset($_SESSION['cart_list']) && count($_SESSION['cart_list']) !=0 ) : ?>
-  
-  <ul>
-    <?php foreach( $_SESSION['cart_list'] as $course ) : ?>
 
-     <tr> 
-      <td><?php echo $course['name']; ?></td> 
-      <td><input type="text" name="quantity[<?php echo $row['id_product'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['id_product']]['quantity'] ?>" /></td> 
-      <td><?php echo $course['description']; ?></td> 
-      <td><?php echo $course['price']; ?>&#8381;</td> 
-    </tr> 
 
-  <?php endforeach; ?>
-</ul>
+      <table>
+          <tbody>
+          <?php foreach( $_SESSION['cart_list'] as $course ) : ?>
+              <tr>
+                  <td><?php echo $course['name']; ?></td>
+                  <td><?php echo $course['description']; ?></td>
+                  <td><?php echo $course['price']; ?>&#8381;</td>
+                  <td><a href="/vendor/delete_from_busket.php?id=<?php echo $course['id'] ?>">Удалить из корзины</a></td>
+              </tr>
+          <?php endforeach; ?>
+          </tbody>
+      </table>
+
+
 
 <?php else : ?>
 
@@ -111,28 +111,28 @@ if ( isset($_GET['id']) && !empty($_GET['id']) ) {
 
 <a href="shop.php">Продолжить покупки</a>
 <br>
-<a href="#">Оформить заказ</a> 
+<a href="#">Оформить заказ</a>
 
 
 
 
-      <!-- Товар #1 
+      <!-- Товар #1
       <div class="item">
         <div class="buttons">
           <span class="delete-btn"></span>
           <span class="like-btn"></span>
         </div>
- 
+
         <div class="image">
           <img src="item-1.png" alt="" />
         </div>
- 
+
         <div class="description">
           <span>Common Projects</span>
           <span>Bball High</span>
           <span>White</span>
         </div>
- 
+
         <div class="quantity">
           <button class="plus-btn" type="button" name="button">
             <img src="img/plus.svg" alt="" />
@@ -142,12 +142,12 @@ if ( isset($_GET['id']) && !empty($_GET['id']) ) {
             <img src="img/minus.svg" alt="" />
           </button>
         </div>
- 
+
         <div class="total-price">$549</div>
       </div>-->
-      
-      
-      
+
+
+
     </div>
 
     <footer class="site-footer" role="contentinfo">

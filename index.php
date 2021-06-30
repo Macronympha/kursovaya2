@@ -16,7 +16,7 @@ require_once 'config/connect.php';
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
   </head>
   <body>
-    
+
     <header role="banner">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -90,7 +90,7 @@ require_once 'config/connect.php';
             </div>
           </div>
         </div>
-        
+
       </div>
 
     </section>
@@ -131,22 +131,22 @@ require_once 'config/connect.php';
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div class="col">
               <div class="about__company d-flex align-items-center h-100">
-                <img src="img/about1.png"> 
+                <img src="img/about1.png">
                 <p class="about__text">Бесплатное ветеринарное обслуживание</p>
               </div>
-            </div> 
+            </div>
             <div class="col">
               <div class="about__company d-flex align-items-center h-100">
-                <img src="img/about2.png"> 
+                <img src="img/about2.png">
                 <p class="about__text">Консультирование по любому вопросу 24 часа в сутки</p>
               </div>
-            </div> 
+            </div>
             <div class="col">
               <div class="about__company d-flex align-items-center h-100">
-                  <img src="img/about3.png"> 
+                  <img src="img/about3.png">
                   <p class="about__text ">Индивидуальный подбор питания</p>
               </div>
-            </div> 
+            </div>
 
           </div>
         </div>
