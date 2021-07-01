@@ -1,12 +1,13 @@
 body {
   background: #fff;
   font-family: "Algeria Two";
-  src: url(fonts/11894.ttf);
+  src: url('../fonts/11894.ttf');
   font-weight: 400;
   font-size: 15px;
   line-height: 1.8;
   color: #868e96; 
 }
+
 
 a {
   -webkit-transition: .5s all ease;
@@ -70,6 +71,13 @@ color: #C14026;
   color: #C14026;
   border-width: 2px;
   border-color: #C14026; 
+  }
+
+  .btn_cart{
+    color: #C14026;
+  }
+  .btn_cart:hover{
+    color: #868e96;
   }
 
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'config/connect.php';
 ?>
 
@@ -64,7 +65,7 @@ require_once 'config/connect.php';
               <a href="basket.php" class="p-2"><span class="fa fa-shopping-cart"></span></a>
             </li>
             <li class="nav-item shop align-items-center justify-content-center">
-              <a href="authorization.php" class="p-2"><span class="fa fa-sign-in"></span></a>
+              <a href="authorization.php" class="p-2"><span class="fa fa-user-circle"></span></a>
             </li>
           </ul>
         </div>
@@ -137,8 +138,10 @@ require_once 'config/connect.php';
                   <h2><?= $articles[1] ?></h2>
                   <p class="mb-5"><?= $articles[2] ?></p>
                   <p><a href="articles.html" class="arrow">Читать</a></p>
-                  <a href="update_article.php?id=<?= $articles[0] ?>" class="p-2"><span class="fa fa-pencil"></span></a>
-                  <a href="vendor/delete_article.php?id=<?= $articles[0] ?>" class="p-2"><span class="fa fa-trash"></span></a>
+                  <?php if (!empty($_SESSION['admin']) && $_SESSION['admin'] == true):?>
+                  <a href="update_article.php?id=<?= $articles[0] ?>" class="p-2 btn_cart"><span class="fa fa-pencil"></span></a>
+                  <a href="vendor/delete_article.php?id=<?= $articles[0] ?>" class="p-2 btn_cart"><span class="fa fa-trash"></span></a>
+                  <?php endif; ?>
                 </div>
               </div>
               <?php
@@ -147,7 +150,7 @@ require_once 'config/connect.php';
           </div>
         </section>
 
-
+<?php if (!empty($_SESSION['admin']) && $_SESSION['admin'] == true):?>
         <h3>Добавить новую статью</h3>
         <form action="vendor/create_article.php" method="post">
           <p>Название</p>
@@ -158,6 +161,8 @@ require_once 'config/connect.php';
           <textarea name="article"> </textarea> <br> <br>
           <button type="submit">Добавить</button>
         </form>
+
+<?php endif; ?>
 
 
         <footer class="site-footer" role="contentinfo">

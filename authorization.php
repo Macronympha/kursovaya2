@@ -2,6 +2,8 @@
 require_once 'config/connect.php';
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -64,7 +66,7 @@ require_once 'config/connect.php';
               <a href="basket.php" class="p-2"><span class="fa fa-shopping-cart"></span></a>
             </li>
             <li class="nav-item shop align-items-center justify-content-center">
-              <a href="basket.php" class="p-2"><span class="fa fa-sign-in"></span></a>
+              <a href="vendor/exit.php" class="p-2"><span class="fa fa-sign-in"></span></a>
             </li>
           </ul>
         </div>
@@ -90,8 +92,8 @@ require_once 'config/connect.php';
     </div>
   </section>
 
-  <h1>Авторизации</h1>
-  <form action="vendor/auth.php" method="post">
+  <h1>Авторизация</h1>
+  <form action="vendor/autch.php" method="post">
     <input type="text" name="login" id="login" placeholder="Введите логин"><br>
     <input type="password" name="pass" id="pass" placeholder="Введите пароль"><br>
     <button type="submit">Авторизоваться</button>
@@ -103,4 +105,51 @@ require_once 'config/connect.php';
 </div>
 </section>
 </body>
-</html>
+</html>  <footer class="site-footer" role="contentinfo">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md-4 mb-5">
+                <h3>О питомнике "Diamond Ray"</h3>
+                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus et dolor blanditiis consequuntur ex voluptates perspiciatis omnis unde minima expedita.</p>
+                <ul class="list-unstyled footer-link d-flex footer-social">
+                  <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                  <li><a href="#" class="p-2"><span class="fa fa-youtube"></span></a></li>
+                  <li><a href="#" class="p-2"><span class="fa fa-vk"></span></a></li>
+                </ul>
+
+              </div>
+              <div class="col-md-5 mb-5">
+                <h3>Контакты</h3>
+                <ul class="list-unstyled footer-link">
+                  <li class="d-block">
+                    <span class="d-block">Адрес:</span>
+                    <span class="text-white">Новосибирск, ул. Красный проспект, д. 72</span></li>
+                    <li class="d-block"><span class="d-block">Telephone:</span><span class="text-white">8 (383) 304-81-78</span></li>
+                    <li class="d-block"><span class="d-block">Email:</span><a class="text-white" href="mailto:natk@natk.com">natk@natk.com</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                  <h3>Полезная информация</h3>
+                  <ul class="list-unstyled footer-link">
+                    <li><a href="about.html">О питомнике "Diamond Ray"</a></li>
+                    <li><a href="ourdogs.html">Наши собаки</a></li>
+                    <li><a href="shop.html">Зоотовары</a></li>
+                    <li><a href="blog.html">Статьи</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- END footer -->
+
+
+
+          <script src="https://use.fontawesome.com/db6ec85ea2.js"></script>
+          <script src="js/jquery-3.2.1.min.js"></script>
+          <script src="js/popper.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/owl.carousel.min.js"></script>
+          <script src="js/jquery.waypoints.min.js"></script>
+          <script src="js/main.js"></script>
+        </body>
+        </html>

@@ -63,6 +63,9 @@ require_once 'config/connect.php';
             <li class="nav-item shop align-items-center justify-content-center">
               <a href="basket.php" class="p-2"><span class="fa fa-shopping-cart"></span></a>
             </li>
+            <li class="nav-item shop align-items-center justify-content-center">
+              <a href="authorization.php" class="p-2"><span class="fa fa-user-circle"></span></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -182,7 +185,7 @@ require_once 'config/connect.php';
           </div>
           <div class="row">
             <div class="col-md-6 form-group">
-             <button type="submit" class="btn btn_shop mt-3">Отправить</button>
+             <button type="submit" class="btn_cart mt-3">Отправить</button>
            </div>
          </div>
        </form>
@@ -204,7 +207,7 @@ require_once 'config/connect.php';
               <input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
             </div><br>
           
-            <button type="submit" class="btn btn_shop mt-3">Отправить форму</button>
+            <button type="submit" >Отправить</button>
           </form>
         </div><!-- .col-sm-4 -->
       </div> <!-- .row -->
